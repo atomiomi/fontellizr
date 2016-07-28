@@ -12,7 +12,7 @@ DEFAULT_CONFIG =
   name: 'fontello'
 
 REGEXP_SVG_FILE = /\.svg$/
-TMP_DIR = 'fontellizr_tmp'
+FONTELLO_HOST = 'http://fontello.com'
 
 UNICODE_CODES_MIN = 0x0
 UNICODE_CODES_MAX = 0x10FFFF
@@ -61,7 +61,7 @@ module.exports = {
   DEFAULT_CONFIG,
 
   REGEXP_SVG_FILE,
-  TMP_DIR,
+  FONTELLO_HOST,
 
   UNICODE_CODES_MIN,
   UNICODE_CODES_MAX,
