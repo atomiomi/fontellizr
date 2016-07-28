@@ -26,7 +26,12 @@
   },
   "dependencies": {
     "unzip": "0.1.11",
-    "superagent": "2.1.0"
+    "needle": "1.0.0",
+    "lodash": "4.14.0",
+    "mkdirp": "0.5.1",
+
+    "xmldom": "0.1.22",
+    "svgpath": "2.1.6"
   },
   "devDependencies": {
     "coffee-script": "1.10.0"
