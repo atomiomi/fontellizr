@@ -12,7 +12,7 @@ module.exports = (options) ->
   fontelloConfig = assign({}, DEFAULT_CONFIG, options.fontelloConfig)
 
   findInDir(svgsSourceDir, REGEXP_SVG_FILE).then (svgFiles) ->
-    fontelloConfig.glyphs = generateGlyphs(svgFiles)
+    fontelloConfig.glyphs = generateGlyphs(svgFiles.sort())
     donwloadFontello(fontelloConfig, { fontsDestDir, stylesDestDir })
 
   .then ->

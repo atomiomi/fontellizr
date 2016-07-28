@@ -1,7 +1,7 @@
 {
   "name": "fontellizr",
   "description": "Module to generate fontello webfont from svg set",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git@github.com:atomiomi/fontellizr.git"
@@ -11,6 +11,7 @@
   },
   "author": "Ablay Keldibek <atomio.ak@gmail.com>",
   "license": "MIT",
+  "main": "lib/index.js",
   "keywords": [
     "fontello",
     "webfont",
