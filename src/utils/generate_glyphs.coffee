@@ -11,7 +11,7 @@ generateHash = ->
 
 module.exports = (svgPaths) ->
   for svgPath in svgPaths
-    content = readFileSync(svgPath, 'utf8')
+    content = readFileSync(svgPath)
     name = parse(svgPath).name
 
     uid: generateHash()
