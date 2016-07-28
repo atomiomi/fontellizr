@@ -21,23 +21,27 @@ getSessionId = (config) ->
     )
 
 downloadFont = (sessionId, { stylesDestDir, fontsDestDir }) ->
+  handleEntry = (entry) ->
+    return if entry.type isnt 'File'
+
+    { base, dir } = parse(entry.path)
+    dir = dir.match(/([^\/]*)\/*$/)[1]
+
+    switch dir
+      when 'css'
+        entry.pipe(createWriteStream("#{stylesDestDir}/#{base}"))
+      when 'font'
+        entry.pipe(createWriteStream("#{fontsDestDir}/#{base}"))
+      else
+        entry.autodrain()
+
   new Promise (resolve, reject) ->
     needle
       .get("#{FONTELLO_HOST}/#{sessionId}/get")
       .pipe(Parse())
-      .on 'entry', (entry) ->
-        return if entry.type isnt 'File'
-
-        { base, dir } = parse(entry.path)
-        dir = dir.match(/([^\/]*)\/*$/)[1]
-
-        switch dir
-          when 'css'
-            entry.pipe(createWriteStream("#{stylesDestDir}/#{base}"))
-          when 'font'
-            entry.pipe(createWriteStream("#{fontsDestDir}/#{base}"))
-          else
-            entry.autodrain()
+      .on('entry', handleEntry)
+      .on('finish', resolve)
+      .on('error', reject)
 
 module.exports = (config, { stylesDestDir, fontsDestDir }) ->
   mkdirp.sync(stylesDestDir)
