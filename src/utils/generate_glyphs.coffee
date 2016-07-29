@@ -5,9 +5,8 @@ getUnicode = require('./get_unicode')
 formatSvg = require('./format_svg')
 
 
-generateHash = ->
-  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'.replace /[x]/g, ->
-    ((Math.random() * 16) | 0).toString(16)
+randomNum = -> ((Math.random() * 16) | 0).toString(16)
+generateHash = -> (randomNum() for i in [1..32]).join()
 
 module.exports = (svgPaths) ->
   for svgPath in svgPaths

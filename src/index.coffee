@@ -1,5 +1,3 @@
-assign = require('lodash/assign')
-
 findInDir = require('./utils/find_in_dir')
 generateGlyphs = require('./utils/generate_glyphs')
 donwloadFontello = require('./utils/download_fontello')
@@ -9,7 +7,7 @@ donwloadFontello = require('./utils/download_fontello')
 
 module.exports = (options) ->
   { svgsSourceDir, fontsDestDir, stylesDestDir } = options
-  fontelloConfig = assign({}, DEFAULT_CONFIG, options.fontelloConfig)
+  fontelloConfig = Object.assign({}, DEFAULT_CONFIG, options.fontelloConfig)
 
   findInDir(svgsSourceDir, REGEXP_SVG_FILE).then (svgFiles) ->
     fontelloConfig.glyphs = generateGlyphs(svgFiles.sort())

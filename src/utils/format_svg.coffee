@@ -1,10 +1,9 @@
-# Wrapper for vendor module which is taken from fontello repo
 SvgPath = require('svgpath')
-svgImageFlatten = require('../../vendor/_svg_image_flatten')
+svgFlatten = require('../../vendor/_svg_image_flatten')
 
 
 module.exports = (content) ->
-  { d, width, height, x, y } = svgImageFlatten(content)
+  { d, width, height, x, y } = svgFlatten(content)
   scale  = 1000 / height
 
   width = Math.round(width * scale)
