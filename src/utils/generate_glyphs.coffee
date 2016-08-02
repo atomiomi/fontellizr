@@ -6,7 +6,7 @@ formatSvg = require('./format_svg')
 
 
 randomNum = -> ((Math.random() * 16) | 0).toString(16)
-generateHash = -> (randomNum() for i in [1..32]).join()
+generateHash = -> (randomNum() for i in [1..32]).join('')
 
 module.exports = (svgPaths) ->
   for svgPath in svgPaths
