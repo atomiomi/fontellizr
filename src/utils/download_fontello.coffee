@@ -1,7 +1,7 @@
-{ createWriteStream } = require('fs')
+{ writeFile } = require('fs')
 { parse } = require('path')
 { post, get } = require('needle')
-{ Parse } = require('unzip')
+decompress = require('decompress')
 
 { FONTELLO_HOST } = require('./constants')
 
@@ -19,26 +19,23 @@ getSessionId = (config) ->
     )
 
 downloadFont = (sessionId, { stylesDestDir, fontsDestDir }) ->
-  handleEntry = (entry) ->
-    return if entry.type isnt 'File'
+  map = (file) ->
+    return if file.type isnt 'file'
 
-    { base, dir } = parse(entry.path)
+    { base, dir } = parse(file.path)
     dir = dir.match(/([^\/]*)\/*$/)[1]
 
     switch dir
       when 'css'
-        entry.pipe(createWriteStream("#{stylesDestDir}/#{base}"))
+        writeFile("#{stylesDestDir}/#{base}", file.data)
       when 'font'
-        entry.pipe(createWriteStream("#{fontsDestDir}/#{base}"))
-      else
-        entry.autodrain()
+        writeFile("#{fontsDestDir}/#{base}", file.data)
 
   new Promise (resolve, reject) ->
-    get("#{FONTELLO_HOST}/#{sessionId}/get")
-      .pipe(Parse())
-      .on('entry', handleEntry)
-      .on('finish', resolve)
-      .on('error', reject)
+    get("#{FONTELLO_HOST}/#{sessionId}/get", (err, resp) ->
+      return reject(err) if err
+      decompress(resp.body, ({ map })).then(resolve).catch(reject)
+    )
 
 module.exports = (config, { stylesDestDir, fontsDestDir }) ->
   getSessionId(config).then((sessionId) ->
