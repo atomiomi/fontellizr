@@ -1,17 +1,21 @@
 { readdir, statSync } = require('fs')
 
 
+sortFiles = (a, b) ->
+  a.mtime - b.mtime
+
 module.exports = (dir, regExp) ->
   new Promise (resolve, reject) ->
     readdir dir, (err, files) ->
       return reject(err) if err
 
-      result = for file in files
+      files = for file in files
         filePath = "#{dir}/#{file}"
-        isDir = statSync(filePath).isDirectory()
-        isMatched = regExp.test(file)
+        stat = statSync(filePath)
 
-        continue if isDir or not isMatched
-        filePath
+        continue if stat.isDirectory() or not regExp.test(file)
+        { path: filePath, mtime: stat.mtime }
 
-      resolve(result)
+      files.sort(sortFiles)
+      files = (file.path for file in files)
+      resolve(files)
