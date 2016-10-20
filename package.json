@@ -1,7 +1,7 @@
 {
   "name": "fontellizr",
   "description": "Module to generate fontello webfont from svg set",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:atomiomi/fontellizr.git"
@@ -18,7 +18,7 @@
     "svg"
   ],
   "engines": {
-    "node": "4.4.x"
+    "node": ">=4.x.x"
   },
   "scripts": {
     "start": "coffee -b -wc -o lib/ src/",
