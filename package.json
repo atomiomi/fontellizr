@@ -18,7 +18,7 @@
     "svg"
   ],
   "engines": {
-    "node": ">=4.x.x"
+    "node": "^6.x.x"
   },
   "scripts": {
     "start": "coffee -b -wc -o lib/ src/",
@@ -28,7 +28,6 @@
   "dependencies": {
     "decompress": "4.0.0",
     "needle": "1.0.0",
-
     "lodash": "4.14.0",
     "xmldom": "0.1.22",
     "svgpath": "2.1.6"

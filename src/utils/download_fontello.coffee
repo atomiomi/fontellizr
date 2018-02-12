@@ -6,6 +6,8 @@ decompress = require('decompress')
 { FONTELLO_HOST } = require('./constants')
 
 
+errorHandler = (err) -> throw err if err
+
 getSessionId = (config) ->
   data =
     config:
@@ -27,9 +29,9 @@ downloadFont = (sessionId, { stylesDestDir, fontsDestDir }) ->
 
     switch dir
       when 'css'
-        writeFile("#{stylesDestDir}/#{base}", file.data)
+        writeFile("#{stylesDestDir}/#{base}", file.data, errorHandler)
       when 'font'
-        writeFile("#{fontsDestDir}/#{base}", file.data)
+        writeFile("#{fontsDestDir}/#{base}", file.data, errorHandler)
 
   new Promise (resolve, reject) ->
     get("#{FONTELLO_HOST}/#{sessionId}/get", (err, resp) ->
