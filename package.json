@@ -18,21 +18,20 @@
     "svg"
   ],
   "engines": {
-    "node": "^6.x.x"
-  },
-  "scripts": {
-    "start": "coffee -b -wc -o lib/ src/",
-    "build": "coffee -b -c -o lib/ src/",
-    "prepublish": "npm run build"
+    "node": "^8.x.x"
   },
   "dependencies": {
-    "decompress": "4.0.0",
-    "needle": "1.0.0",
-    "lodash": "4.14.0",
-    "xmldom": "0.1.22",
-    "svgpath": "2.1.6"
+    "decompress": "4.2.0",
+    "needle": "2.2.1",
+    "lodash": "4.17.10",
+    "xmldom": "0.1.27",
+    "svgpath": "2.2.1"
   },
   "devDependencies": {
-    "coffee-script": "1.10.0"
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "17.0.0",
+    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.10.0"
   }
 }

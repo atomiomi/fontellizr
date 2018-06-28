@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb"],
+  "rules": {
+    "no-console": "off",
+    "no-restricted-syntax": [
+      "error",
+      "LabeledStatement",
+      "WithStatement",
+      "YieldExpression"
+    ],
+    "arrow-parens": ["error", "always"],
+    "consistent-return": "off",
+    "object-curly-newline": "off",
+    "no-bitwise": "off"
+  }
+}
