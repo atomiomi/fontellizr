@@ -22,10 +22,11 @@
   },
   "dependencies": {
     "decompress": "4.2.0",
-    "needle": "2.2.1",
     "lodash": "4.17.10",
-    "xmldom": "0.1.27",
-    "svgpath": "2.2.1"
+    "needle": "2.2.1",
+    "ora": "^3.0.0",
+    "svgpath": "2.2.1",
+    "xmldom": "0.1.27"
   },
   "devDependencies": {
     "eslint": "4.19.1",
