@@ -22,17 +22,17 @@
   },
   "dependencies": {
     "decompress": "4.2.0",
-    "lodash": "4.17.10",
-    "needle": "2.2.1",
-    "ora": "^3.0.0",
+    "lodash": "^4.17.11",
+    "needle": "^2.2.4",
+    "ora": "^3.1.0",
     "svgpath": "2.2.1",
     "xmldom": "0.1.27"
   },
   "devDependencies": {
-    "eslint": "4.19.1",
-    "eslint-config-airbnb": "17.0.0",
-    "eslint-plugin-import": "2.13.0",
-    "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "7.10.0"
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
   }
 }
