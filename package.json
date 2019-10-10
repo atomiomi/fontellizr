@@ -26,15 +26,15 @@
   },
   "dependencies": {
     "decompress": "4.2.0",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.15",
     "needle": "^2.4.0",
-    "ora": "^3.4.0",
+    "ora": "^4.0.2",
     "svgpath": "^2.2.2",
     "xmldom": "0.1.27"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.0"
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
