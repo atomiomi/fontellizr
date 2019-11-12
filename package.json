@@ -21,9 +21,6 @@
     "webfont",
     "svg"
   ],
-  "engines": {
-    "node": "^10.x.x"
-  },
   "dependencies": {
     "decompress": "4.2.0",
     "lodash": "^4.17.15",
