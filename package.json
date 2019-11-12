@@ -1,6 +1,6 @@
 {
   "name": "fontellizr",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Module to generate fontello webfont from svg set",
   "main": "lib/index.js",
   "bin": "./bin/fontellizr.js",
