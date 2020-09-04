@@ -22,7 +22,7 @@
     "svg"
   ],
   "dependencies": {
-    "decompress": "4.2.0",
+    "decompress": "4.2.1",
     "lodash": "^4.17.15",
     "needle": "^2.4.0",
     "ora": "^4.0.2",
