@@ -1,0 +1,494 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "acorn": {
+      "name": "acorn",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1085600,
+          "name": "acorn",
+          "dependency": "acorn",
+          "title": "Regular Expression Denial of Service in Acorn",
+          "url": "https://github.com/advisories/GHSA-6chw-6frg-f759",
+          "severity": "high",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=7.0.0 <7.1.1"
+        }
+      ],
+      "effects": [],
+      "range": "7.0.0 - 7.1.0",
+      "nodes": [
+        "node_modules/acorn"
+      ],
+      "fixAvailable": true
+    },
+    "ajv": {
+      "name": "ajv",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1089034,
+          "name": "ajv",
+          "dependency": "ajv",
+          "title": "Prototype Pollution in Ajv",
+          "url": "https://github.com/advisories/GHSA-v88g-cgmw-v5xw",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-915",
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 5.6,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+          },
+          "range": "<6.12.3"
+        }
+      ],
+      "effects": [],
+      "range": "<6.12.3",
+      "nodes": [
+        "node_modules/ajv"
+      ],
+      "fixAvailable": true
+    },
+    "ansi-regex": {
+      "name": "ansi-regex",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1094090,
+          "name": "ansi-regex",
+          "dependency": "ansi-regex",
+          "title": "Inefficient Regular Expression Complexity in chalk/ansi-regex",
+          "url": "https://github.com/advisories/GHSA-93q8-gq69-wqmw",
+          "severity": "high",
+          "cwe": [
+            "CWE-697",
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=3.0.0 <3.0.1"
+        },
+        {
+          "source": 1094091,
+          "name": "ansi-regex",
+          "dependency": "ansi-regex",
+          "title": "Inefficient Regular Expression Complexity in chalk/ansi-regex",
+          "url": "https://github.com/advisories/GHSA-93q8-gq69-wqmw",
+          "severity": "high",
+          "cwe": [
+            "CWE-697",
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=4.0.0 <4.1.1"
+        }
+      ],
+      "effects": [],
+      "range": "3.0.0 || 4.0.0 - 4.1.0",
+      "nodes": [
+        "node_modules/ansi-regex",
+        "node_modules/strip-ansi/node_modules/ansi-regex"
+      ],
+      "fixAvailable": true
+    },
+    "bl": {
+      "name": "bl",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1090072,
+          "name": "bl",
+          "dependency": "bl",
+          "title": "Remote Memory Exposure in bl",
+          "url": "https://github.com/advisories/GHSA-pp7h-53gx-mx7r",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-125",
+            "CWE-126"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+          },
+          "range": "<1.2.3"
+        }
+      ],
+      "effects": [],
+      "range": "<1.2.3",
+      "nodes": [
+        "node_modules/bl"
+      ],
+      "fixAvailable": true
+    },
+    "debug": {
+      "name": "debug",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1096792,
+          "name": "debug",
+          "dependency": "debug",
+          "title": "Regular Expression Denial of Service in debug",
+          "url": "https://github.com/advisories/GHSA-gxpj-cx7g-858c",
+          "severity": "low",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 3.7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": ">=4.0.0 <4.3.1"
+        },
+        {
+          "source": 1096793,
+          "name": "debug",
+          "dependency": "debug",
+          "title": "Regular Expression Denial of Service in debug",
+          "url": "https://github.com/advisories/GHSA-gxpj-cx7g-858c",
+          "severity": "low",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 3.7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": ">=3.2.0 <3.2.7"
+        }
+      ],
+      "effects": [],
+      "range": "3.2.0 - 3.2.6 || 4.0.0 - 4.3.0",
+      "nodes": [
+        "node_modules/debug",
+        "node_modules/eslint/node_modules/debug"
+      ],
+      "fixAvailable": true
+    },
+    "glob-parent": {
+      "name": "glob-parent",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1095007,
+          "name": "glob-parent",
+          "dependency": "glob-parent",
+          "title": "glob-parent vulnerable to Regular Expression Denial of Service in enclosure regex",
+          "url": "https://github.com/advisories/GHSA-ww39-953v-wcq6",
+          "severity": "high",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<5.1.2"
+        }
+      ],
+      "effects": [],
+      "range": "<5.1.2",
+      "nodes": [
+        "node_modules/glob-parent"
+      ],
+      "fixAvailable": true
+    },
+    "hosted-git-info": {
+      "name": "hosted-git-info",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1089809,
+          "name": "hosted-git-info",
+          "dependency": "hosted-git-info",
+          "title": "Regular Expression Denial of Service in hosted-git-info",
+          "url": "https://github.com/advisories/GHSA-43f8-2h32-f4cj",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": "<2.8.9"
+        }
+      ],
+      "effects": [],
+      "range": "<2.8.9",
+      "nodes": [
+        "node_modules/hosted-git-info"
+      ],
+      "fixAvailable": true
+    },
+    "lodash": {
+      "name": "lodash",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        {
+          "source": 1094500,
+          "name": "lodash",
+          "dependency": "lodash",
+          "title": "Regular Expression Denial of Service (ReDoS) in lodash",
+          "url": "https://github.com/advisories/GHSA-29mw-wpgm-hmr9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400",
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": "<4.17.21"
+        },
+        {
+          "source": 1096305,
+          "name": "lodash",
+          "dependency": "lodash",
+          "title": "Prototype Pollution in lodash",
+          "url": "https://github.com/advisories/GHSA-p6mc-m468-83gw",
+          "severity": "high",
+          "cwe": [
+            "CWE-770",
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 7.4,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H"
+          },
+          "range": ">=3.7.0 <4.17.19"
+        },
+        {
+          "source": 1096487,
+          "name": "lodash",
+          "dependency": "lodash",
+          "title": "Command Injection in lodash",
+          "url": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm",
+          "severity": "high",
+          "cwe": [
+            "CWE-77",
+            "CWE-94"
+          ],
+          "cvss": {
+            "score": 7.2,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": "<4.17.21"
+        }
+      ],
+      "effects": [],
+      "range": "<=4.17.20",
+      "nodes": [
+        "node_modules/lodash"
+      ],
+      "fixAvailable": true
+    },
+    "minimatch": {
+      "name": "minimatch",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1096485,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch ReDoS vulnerability",
+          "url": "https://github.com/advisories/GHSA-f8q6-p94x-37v3",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<3.0.5"
+        }
+      ],
+      "effects": [],
+      "range": "<3.0.5",
+      "nodes": [
+        "node_modules/minimatch"
+      ],
+      "fixAvailable": true
+    },
+    "minimist": {
+      "name": "minimist",
+      "severity": "critical",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1096466,
+          "name": "minimist",
+          "dependency": "minimist",
+          "title": "Prototype Pollution in minimist",
+          "url": "https://github.com/advisories/GHSA-vh95-rmgr-6w4m",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 5.6,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+          },
+          "range": "<0.2.1"
+        },
+        {
+          "source": 1096548,
+          "name": "minimist",
+          "dependency": "minimist",
+          "title": "Prototype Pollution in minimist",
+          "url": "https://github.com/advisories/GHSA-xvch-5gv4-984h",
+          "severity": "critical",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 9.8,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": "<0.2.4"
+        }
+      ],
+      "effects": [
+        "mkdirp"
+      ],
+      "range": "<=0.2.3",
+      "nodes": [
+        "node_modules/minimist"
+      ],
+      "fixAvailable": true
+    },
+    "mkdirp": {
+      "name": "mkdirp",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "minimist"
+      ],
+      "effects": [],
+      "range": "0.4.1 - 0.5.1",
+      "nodes": [
+        "node_modules/mkdirp"
+      ],
+      "fixAvailable": true
+    },
+    "path-parse": {
+      "name": "path-parse",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1089681,
+          "name": "path-parse",
+          "dependency": "path-parse",
+          "title": "Regular Expression Denial of Service in path-parse",
+          "url": "https://github.com/advisories/GHSA-hj48-42vr-x3v9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": "<1.0.7"
+        }
+      ],
+      "effects": [],
+      "range": "<1.0.7",
+      "nodes": [
+        "node_modules/path-parse"
+      ],
+      "fixAvailable": true
+    },
+    "semver": {
+      "name": "semver",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1096483,
+          "name": "semver",
+          "dependency": "semver",
+          "title": "semver vulnerable to Regular Expression Denial of Service",
+          "url": "https://github.com/advisories/GHSA-c2qf-rxjj-qqgw",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": "<5.7.2"
+        },
+        {
+          "source": 1096484,
+          "name": "semver",
+          "dependency": "semver",
+          "title": "semver vulnerable to Regular Expression Denial of Service",
+          "url": "https://github.com/advisories/GHSA-c2qf-rxjj-qqgw",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": ">=6.0.0 <6.3.1"
+        }
+      ],
+      "effects": [],
+      "range": "<5.7.2 || >=6.0.0 <6.3.1",
+      "nodes": [
+        "node_modules/eslint/node_modules/semver",
+        "node_modules/semver"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 6,
+      "high": 5,
+      "critical": 1,
+      "total": 13
+    },
+    "dependencies": {
+      "prod": 81,
+      "dev": 153,
+      "optional": 0,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 233
+    }
+  }
+}

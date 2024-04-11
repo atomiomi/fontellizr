@@ -7,6 +7,9 @@
   "scripts": {
     "lint": "eslint ./"
   },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:atomiomi/fontellizr.git"
@@ -22,12 +25,12 @@
     "svg"
   ],
   "dependencies": {
-    "decompress": "4.2.0",
+    "decompress": "4.2.1",
     "lodash": "^4.17.15",
     "needle": "^2.4.0",
     "ora": "^4.0.2",
     "svgpath": "^2.2.2",
-    "xmldom": "0.1.27"
+    "@xmldom/xmldom": "0.8.10"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
