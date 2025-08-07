@@ -33,7 +33,7 @@
     "@xmldom/xmldom": "0.8.10"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
+    "eslint": "^9.32.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2"
   }
